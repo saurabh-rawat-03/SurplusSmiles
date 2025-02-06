@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Restaurant - Food Donation Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li class="dropdown">
+                <a href="#">Login ⬇</a>
+                <ul class="dropdown-menu">
+                    <li><a href="loginRestro.html">Login for Restaurant</a></li>
+                    <li><a href="loginNGO.html">Login for NGO</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Registration ⬇</a>
+                <ul class="dropdown-menu">
+                    <li><a href="registrationRestro.html">Registration for Restaurant</a></li>
+                    <li><a href="registrationNGO.html">Registration for NGO</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="registration-form">
+            <h2>Register Your Restaurant</h2>
+            <label for="restaurant-name">Restaurant Name:</label>
+            <input type="text" id="restaurant-name" name="restaurant-name" required>
+
+            <label for="owner-name">Owner's Name:</label>
+            <input type="text" id="owner-name" name="owner-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Restaurant Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="food-types">Types of Food Available for Donation:</label>
+            <textarea id="food-types" name="food-types" rows="3" required></textarea>
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2023 Food Donation Project. All rights reserved.</p>
+        <p>Contact us: info@fooddonationproject.org</p>
+    </footer>
+</body>
+</html>
