@@ -15,8 +15,8 @@ body{
 
 .container{
     position: relative;
-    width: 850px;
-    height: 550px;
+    width: 900px;
+    height: 700px;
     background: #fff;
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .2);
@@ -272,62 +272,3 @@ form{
     }
 }
 
-/* 
-.navbar {
-    background-color: #333;
-    padding: 10px;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-}
-
-.menu li {
-    position: relative;
-    margin: 0 15px;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    display: block;
-    transition: background 0.3s;
-}
-
-.menu li a:hover {
-    background-color: #555;
-} */
-
-/* Dropdown Styles */
-/* .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #444;
-    min-width: 180px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-}
-
-.dropdown-menu li {
-    width: 100%;
-}
-
-.dropdown-menu li a {
-    padding: 12px;
-    display: block;
-    color: white;
-    transition: background 0.3s;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #555;
-} */
-
-/* Show dropdown ONLY when hovering over the dropdown parent */
-/* .dropdown:hover .dropdown-menu {
-    display: block;
-} */
