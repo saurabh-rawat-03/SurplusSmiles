@@ -1,8 +1,8 @@
 <?php
-$host="localhost";
-$user="root";
-$pass="";
-$db="surplussmiles";
+$host="sql210.ezyro.com";
+$user="ezyro_38329855";
+$pass="412879bbc11408b";
+$db="ezyro_38329855_surplussmiles";
 
 $conn = new mysqli($host, $user, $pass, $db);
 if($conn -> connect_error){
