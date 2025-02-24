@@ -53,6 +53,7 @@
         </div>
 
         <div class = "form-box register" style="overflow: auto;">
+            
             <form method = "POST" action="register.php">
                 <br>
                 <br>
@@ -106,14 +107,25 @@
                 <div class="forgot-link">
                     <a href="#">Forgot password?</a>
                 </div>
-                <button type="submit" class = "btn" name="signUp">Register</button>
+                <button type="submit" class="btn" name="signUp" onclick="openPopup()">Register</button>
+
+
                 <p>or register with social platforms</p>
                 <div class="social-icons">
                     <a href="#"><i class='bx bxl-google' ></i></a>
                     <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
                     
                 </div>
+
+                
             </form>
+
+            <!-- <div class="popup" id="popup">
+                <img src="../Assets/tick.png" alt="success">
+                <h2>Thank You</h2>
+                <p>Registration Successful</p>
+                <button type="button" class="btn" id="close" onclick="closePopup()">Continue to Login</button>
+            </div> -->
 
         </div>
         <div class="toggle-box">
@@ -132,11 +144,6 @@
         </div>
 
     </div>
-
-    <!-- <footer>
-        <p>&copy; 2023 Food Donation Project. All rights reserved.</p>
-        <p>Contact us: info@fooddonationproject.org</p>
-    </footer> -->
 
     <script src = "../Scripts/loginScript.js"></script>
 </body>

@@ -21,7 +21,7 @@ if(isset($_POST['signUp'])){
                         VALUES ('$rName', '$email', '$password', '$phNum', '$gstIn', '$time', '$address')";
         
         if($conn->query($insetQuery) == TRUE){
-            header("location: ../index.html");
+            header("location: loginRestro.html");
         }else{
             echo "Error: ".$conn->error;
         }
