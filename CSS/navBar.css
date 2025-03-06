@@ -28,7 +28,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background: rgba(34, 35, 39, 0.4);
     padding: 28px 12%;
     transition: all .50s ease;
 }
