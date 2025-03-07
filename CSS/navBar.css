@@ -22,13 +22,13 @@ body{
 header{
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 4px;
     right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(34, 35, 39, 0.4);
+    background: rgba(34, 35, 39, 0.5);
     padding: 28px 12%;
     transition: all .50s ease;
 }

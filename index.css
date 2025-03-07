@@ -1,80 +1,504 @@
-
-    .hero {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: left;
-        /* margin-top: x; */
-        background: url('./Assets/pt2.jpg') no-repeat center center/cover;
-        padding-left: 70px;
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background: #F5F5F5;
+  }
+  
+  h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Hero Section */
+.hero {
+    background: url('./Assets/surplus.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: zoomInOut 2s infinite alternate ease-in-out; /* Add animation */
+  }
+  
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1); /* Normal size */
     }
-
-    .hero h1 {
-        font-size: 5rem; /* Increased size */
-        margin-bottom: 10px; /* Adjusted margin */
-        color: white;
+    100% {
+      transform: scale(1.3); /* Slightly larger */
     }
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: #4CAF50;
+  }
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.9;
+  }
+  
+  /* Carousel Section */
+  .carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    width: 100%;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  /* About Section */
+  .about, .how-it-works, .impact, .testimonials, .map, .newsletter {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .about h2, .how-it-works h2, .impact h2, .testimonials h2, .map h2, .newsletter h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+/* How It Works Section */
+.how-it-works {
+    padding: 60px 20px;
+    text-align: center;
+    background: #F5F5F5; /* Light gray background */
+  }
+  
+  .how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333; /* Dark text color */
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between cards */
+  }
+  
+  .step {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .step:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+  }
+  
+  .step-icon {
+    margin-bottom: 20px;
+  }
+  
+  .step-icon img {
+    width: 80px; /* Adjust icon size */
+    height: 80px;
+  }
+  
+  .step h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4CAF50; /* Green accent color */
+  }
+  
+  .step p {
+    font-size: 16px;
+    color: #555; /* Slightly darker text for better readability */
+  }
+  
+  /* Impact Section */
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .stat {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .stat:hover {
+    transform: translateY(-10px);
+  }
+  
+  .stat h3 {
+    font-size: 36px;
+    color: #4CAF50;
+  }
+  
+  .progress-bar {
+    width: 80%;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+  }
+  
+  .progress-text {
+    font-size: 18px;
+    color: #4CAF50;
+  }
+  
+  /* Fun Facts Section */
+  .fun-facts {
+    background: #4CAF50; /* Green background */
+    color: white;
+    padding: 60px 20px;
+    text-align: center; /* Center-align the heading */
+  }
+  
+  .fun-facts h2 {
+    font-size: 42px; /* Bigger heading */
+    margin-bottom: 40px;
+  }
+  
+  .facts {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center-align cards */
+    gap: 20px; /* Space between cards */
+  }
+  
+  .fact-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Wider cards to accommodate images */
+    width: 100%; /* Ensure cards take full width */
+    display: flex;
+    align-items: center; /* Center-align image and text vertically */
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensure images don't overflow */
+  }
+  
+  .fact-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .fact-image {
+    flex: 1; /* Take up 1 part of the card */
+    max-width: 300px; /* Limit image width */
+  }
+  
+  .fact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the area */
+  }
+  
+  .fact-text {
+    flex: 2; /* Take up 2 parts of the card */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    color: #333; /* Dark text color for readability */
+  }
+  
+  .fact-text h3 {
+    font-size: 24px;
+    color: #4CAF50; /* Green color for the heading */
+    margin-bottom: 10px;
+  }
+  
+  .fact-text p {
+    font-size: 16px;
+    color: #555; /* Slightly darker text for better readability */
+  }
+  
+  /* Testimonials Section */
+  .testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card p {
+    font-style: italic;
+  }
+  
+  .card h4 {
+    margin-top: 10px;
+    color: #4CAF50;
+  }
+  
+  /* Map Section */
+  #map-container {
+    height: 400px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Newsletter Section */
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .newsletter-form button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .newsletter-form button:hover {
+    background: #45a049;
+  }
+  
+  /* Footer */
+footer {
+    background: #2C3E50; /* Dark blue background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #4CAF50; /* Green accent color */
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #B0BEC5; /* Light gray text */
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #B0BEC5; /* Light gray text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #4CAF50; /* Green accent color on hover */
+  }
+  
+  .footer-section ul li i {
+    margin-right: 10px;
+    color: #4CAF50; /* Green accent color */
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70%;
+  }
+  
+  .newsletter-form button {
+    padding: 10px 15px;
+    background: #4CAF50; /* Green accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background: #45a049; /* Darker green on hover */
+  }
+  
+  .social-media {
+    margin-top: 20px;
+  }
+  
+  .social-media a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: #4CAF50; /* Green accent color on hover */
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #B0BEC5; /* Light gray text */
+  }
 
-    .hero p {
-        font-size: 1.5rem; /* Adjusted size */
-        color: white; /* Changed color to white */
-        margin-top: 10px; /* Added margin to shift below SurplusSmiles */
-    }
-
-    .philosophy {
-        background-color: #fff9e6;
-        padding: 100px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .philosophy-content {
-        max-width: 50%;
-    }
-
-    .philosophy h2 {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-        color: #e67e22;
-        font-style: italic;
-        font-weight: 300;
-    }
-
-    .philosophy p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 30px;
-        color: #34495e;
-    }
-
-    .cta-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: flex-start;
-    }
-
-    .btn {
-        padding: 12px 30px;
-        border: none;
-        border-radius: 25px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-
-    .btn-primary {
-        background-color: #e67e22;
-        color: white;
-    }
-
-    .btn-secondary {
-        background-color: #f39c12;
-        color: white;
-    }
-
-    .philosophy-image {
-        max-width: 45%;
-    }
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #e0e0e0; /* Background color of the progress bar */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  .scroll-progress {
+    height: 100%;
+    width: 0;
+    background: #4CAF50; /* Color of the progress indicator */
+    transition: width 0.3s ease; /* Smooth transition for the progress */
+  }
+  
