@@ -70,12 +70,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     L.marker(location.coords).addTo(map)
       .bindPopup(location.name);
   });
-
-
-// Scroll Progress Bar Functionality
-window.addEventListener('scroll', () => {
-    const scrollProgress = document.querySelector('.scroll-progress');
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (window.scrollY / scrollHeight) * 100;
-    scrollProgress.style.width = `${scrolled}%`;
-  });
