@@ -3,54 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login NGO - Food Donation Project</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>SurplusSmiles - Login NGO</title>
+    <link rel="stylesheet" href="../CSS/loginNGO.css">
+
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./aboutus.html">About Us</a></li>
-            <li><a href="./contactus.html">Contact Us</a></li>
-            <li class="dropdown">
-                <a href="#">Login ⬇</a>
-                <ul class="dropdown-menu">
-                    <li><a href="./loginRestro.html">Login for Restaurant</a></li>
-                    <li><a href="#">Login for NGO</a></li>
-                </ul>
-            </li>
 
-            <li class="dropdown">
-                <a href="#">Registration ⬇</a>
-                <ul class="dropdown-menu">
-                    <li><a href="./registrationRestro.html">Registration for Restaurant</a></li>
-                    <li><a href="./registrationNGO.html">Registration for NGO</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-<br>
-<br>
-<br>
-    <main>
-        <form id="login-form">
-            <h2>Login to Your NGO Account</h2>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+   
+  
+    <div class = "container">
+        <div class = "form-box login">
+            <form method="POST" action="registerNgo.php">
+                <h1>NGO Login</h1>
+                <div class="input-box">
+                    <input type="text" name="email" id="emaill" placeholder="Email"
+                    required>
+                    <i class='bx bxs-user'></i>
+                </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name=" password" required>
+                <div class="input-box">
+                    <input type="password" name="password" id="passwordl" placeholder="Password"
+                    required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class = "btn" name="signIn">Login</button>
+                <p>or login with social platforms</p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-google' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+                    
+                </div>
+            </form>
 
-            <button type="submit">Login</button>
-        </form>
-    </main>
+        </div>
 
-    <br>
-    <br>
-    <br>
-    <footer>
-        <p>&copy; 2023 Food Donation Project. All rights reserved.</p>
-        <p>Contact us: info@fooddonationproject.org</p>
-    </footer>
+        <div class = "form-box register">
+            
+            <form method = "POST" action="registerNgo.php">
+                           
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <input type="text" name="nName" id="nName" placeholder="NGO Name"
+                    required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" id="email" placeholder="Email"
+                    required>
+                    <i class='bx bxs-envelope' ></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="password" id="password" placeholder="Password"
+                    required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="number" name ="phnum" id="phNum" placeholder="Phone Number"
+                    required>
+                    <i class='bx bxs-phone'></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" name="address" id="address" placeholder="Address"
+                    required>
+                    <i class='bx bx-restaurant'></i>
+                </div>
+
+                <!-- <div class="input-box">
+                    <input type="number" name="gstIn" id="gstIn" placeholder="GSTIN Number"
+                    required>
+                    <i class="ri-file-text-line"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="time" name="closeTime" id="closeTime" placeholder="Closing Time"
+                    required>
+                    <i class='bx bxs-time-five'></i>
+                </div> -->
+
+                <div class="forgot-link">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn" name="signUp">Register</button>
+
+
+                <p>or register with social platforms</p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-google' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+                    
+                </div>
+
+                
+            </form>
+
+            <!-- <div class="popup" id="popup">
+                <img src="../Assets/tick.png" alt="success">
+                <h2>Thank You</h2>
+                <p>Registration Successful</p>
+                <button type="button" class="btn" id="close" onclick="closePopup()">Continue to Login</button>
+            </div> -->
+
+        </div>
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome!</h1>
+                <p>Don't have an account?</p>
+                <button class="btn register-btn">Register</button>
+                <!-- <button class="home"><a href="../index.html">Home</a></button> -->
+            </div>
+
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Custom Modal for Validation Messages -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <script src = "../Scripts/loginScriptNgo.js"></script>
 </body>
 </html>

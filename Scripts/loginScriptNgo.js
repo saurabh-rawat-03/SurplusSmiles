@@ -11,13 +11,12 @@ loginBtn.addEventListener('click', () => {
 });
 
 
-//validation from below
+//Validating Form Data
 document.addEventListener('DOMContentLoaded', function () {
     const container = document.querySelector('.container');
     const registerBtn = document.querySelector('.register-btn');
     const loginBtn = document.querySelector('.login-btn');
 
-    // Toggle between login and registration forms
     registerBtn.addEventListener('click', () => {
         container.classList.add('active');
     });
@@ -75,12 +74,13 @@ function handleFormSubmit(form, action) {
     const formData = new FormData(form);
     formData.append(action, true); // Add the action to the form data
 
-    fetch('register.php', {
+    fetch('registerNgo.php', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
+        console.log("Response Data:", data); // Debugging line
         if (data.status === 'error') {
             showModal(data.message); // Show error message in the modal
         } else if (data.status === 'success') {
@@ -90,7 +90,7 @@ function handleFormSubmit(form, action) {
 
                 // Redirect to login page after 2 seconds
                 setTimeout(() => {
-                    window.location.href = 'loginRestro.html';
+                    window.location.href = 'loginNGO.html';
                 }, 2000); // 2000 milliseconds = 2 seconds
             } else if (action === 'signIn') {
                 // Redirect to homepage on successful login
@@ -132,25 +132,18 @@ function validateLoginForm() {
         return false;
     }
 
-    // if (password.length < 8) {
-    //     showModal('Password must be at least 8 characters long.');
-    //     return false;
-    // }
-
     return true;
 }
 
 // Validate the registration form
 function validateRegisterForm() {
-    const rName = document.getElementById('rName').value.trim();
+    const nName = document.getElementById('nName').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
     const phNum = document.getElementById('phNum').value.trim();
     const address = document.getElementById('address').value.trim();
-    const gstIn = document.getElementById('gstIn').value.trim();
-    const closeTime = document.getElementById('closeTime').value.trim();
 
-    if (!rName || !email || !password || !phNum || !address || !gstIn || !closeTime) {
+    if (!nName || !email || !password || !phNum || !address) {
         showModal('Please fill in all fields.');
         return false;
     }
@@ -159,16 +152,6 @@ function validateRegisterForm() {
         showModal('Password must be at least 8 characters long.');
         return false;
     }
-
-    // if (!validateEmail(email)) {
-    //     showModal('Please enter a valid email address.');
-    //     return false;
-    // }
-
-    // if (!validatePhoneNumber(phNum)) {
-    //     showModal('Please enter a valid phone number.');
-    //     return false;
-    // }
 
     return true;
 }

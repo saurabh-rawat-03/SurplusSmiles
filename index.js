@@ -61,7 +61,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   
   // Add markers for restaurants and NGOs
   const locations = [
-    { name: 'Headquarter', coords: [30.28303, 78.08746] }, // Mumbai
+    { name: 'Headquarter', coords: [30.400495710175814, 78.07904923286792] }, // Mumbai
     // { name: 'NGO 1', coords: [28.7041, 77.1025] }, // Delhi
     // { name: 'Restaurant 2', coords: [12.9716, 77.5946] }, // Bangalore
   ];
