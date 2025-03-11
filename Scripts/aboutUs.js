@@ -34,15 +34,12 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(statisticsSection);
 
-// Initialize Swiper for Testimonials Carousel
-const swiper = new Swiper('.swiper-container', {
-    loop: true, // Enable infinite loop
-    autoplay: {
-      delay: 3000, // Delay between slides (3 seconds)
-      disableOnInteraction: false, // Continue autoplay even when user interacts with the carousel
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+// Duplicate testimonial cards for seamless looping
+const testimonialsTrack = document.querySelector('.testimonials-track');
+const testimonials = testimonialsTrack.querySelectorAll('.testimonial-card');
+
+// Clone the cards and append them to the track
+testimonials.forEach(card => {
+    const clone = card.cloneNode(true);
+    testimonialsTrack.appendChild(clone);
+});

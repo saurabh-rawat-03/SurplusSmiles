@@ -197,62 +197,63 @@ body {
     color: #555;
   }
   
-  /* Testimonials Carousel Section */
+ /* Testimonials Section */
 .testimonials {
-    padding: 60px 20px;
-    text-align: center;
-    background: white;
-    overflow: hidden; /* Prevent overflow */
+  padding: 60px 20px;
+  text-align: center;
+  background: white;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #2C3E50; /* Dark Blue */
+}
+
+.testimonials-container {
+  width: 100%;
+  overflow: hidden; /* Hide overflow */
+  position: relative;
+}
+
+.testimonials-track {
+  display: flex;
+  animation: scroll 20s linear infinite; /* Animation for scrolling */
+}
+
+.testimonial-card {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust card width */
+  background: #F5F5F5; /* Light Gray */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; /* Space between cards */
+  text-align: center;
+}
+
+.testimonial-card p {
+  font-size: 18px;
+  color: #555; /* Dark Gray */
+  margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+  font-size: 20px;
+  color: #4CAF50; /* Green */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+  0% {
+      transform: translateX(0); /* Start from the right */
   }
-  
-  .testimonials h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #2C3E50; /* Dark Blue */
+  100% {
+      transform: translateX(-50%); /* Move to the left */
   }
-  
-  .swiper-container {
-    width: 100%;
-    max-width: 800px; /* Constrain carousel width */
-    margin: 0 auto; /* Center the carousel */
-    padding: 0 20px; /* Add padding to prevent overflow */
-  }
-  
-  .swiper-slide {
-    background: #F5F5F5; /* Light Gray */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .swiper-slide p {
-    font-size: 18px;
-    color: #555; /* Dark Gray */
-    margin-bottom: 20px;
-  }
-  
-  .swiper-slide h4 {
-    font-size: 20px;
-    color: #4CAF50; /* Green */
-  }
-  
-  /* Swiper Pagination */
-  .swiper-pagination {
-    position: relative;
-    margin-top: 20px;
-  }
-  
-  .swiper-pagination-bullet {
-    background: #4CAF50; /* Green */
-    opacity: 0.5;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background: #4CAF50; /* Green */
-    opacity: 1;
-  }
-  
+}
+    
   /* Call-to-Action Section */
   .cta {
     padding: 60px 20px;
