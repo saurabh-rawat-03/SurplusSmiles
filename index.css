@@ -80,57 +80,57 @@ body {
   .btn-primary:hover, .btn-secondary:hover {
     opacity: 0.9;
   }
-  
   /* Carousel Section */
-  .carousel {
-    position: relative;
-    max-width: 1000px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    width: 100%;
-  }
-  
-  .carousel-slide img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 24px;
-    transition: background 0.3s ease;
-  }
-  
-  .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-  
-  .prev-btn {
-    left: 10px;
-  }
-  
-  .next-btn {
-    right: 10px;
-  }
+.carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  display: flex;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
   
   /* About Section */
   .about, .how-it-works, .impact, .testimonials, .map, .newsletter {
@@ -187,8 +187,8 @@ body {
   }
   
   .step-icon img {
-    width: 80px; /* Adjust icon size */
-    height: 80px;
+    width: 250px; /* Adjust icon size */
+    height: 250px;
   }
   
   .step h3 {
@@ -310,6 +310,11 @@ body {
   .fact-text p {
     font-size: 16px;
     color: #555; /* Slightly darker text for better readability */
+  }
+  
+  .fact-text a {
+    font-size: 16px;
+    color: black; /* Slightly darker text for better readability */
   }
   
   /* Testimonials Section */

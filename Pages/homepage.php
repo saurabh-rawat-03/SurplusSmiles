@@ -1,5 +1,17 @@
 <?php
-    session_start();
+    session_start(); // Start the session
+
+    // Check if the user is logged in
+    if (!isset($_SESSION['email'])) {
+        // Redirect to the login page if the user is not logged in
+        header("Location: loginRestro.html"); // Adjust the path as needed
+        exit();
+    }
+    
+    // Prevent caching of this page
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
     include("connect.php");
 ?>
 
@@ -40,8 +52,8 @@
                 <a href ="#" class="user"><i class="ri-user-3-line"></i>Profile</a>
                 <ul class="dropdown-menu">
                     <li><a href="#">My Account</a></li>
-                    <li><a href="./donateNow.html">Donate</a></li>
-                    <li><a href="../index.html">Logout</a></li>
+                    <li><a href="./donateNow.php">Donate</a></li>
+                    <li><a href="./logout.php">Logout</a></li>
                 </ul>
             </li>
             <!-- <a href = "#">Register</a> -->

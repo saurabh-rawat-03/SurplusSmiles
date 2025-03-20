@@ -7,51 +7,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     });
   });
-  
-  // Carousel Functionality
-  const carouselContainer = document.querySelector('.carousel-container');
-  const carouselSlides = document.querySelectorAll('.carousel-slide img');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  
-  let currentIndex = 0;
-  const totalSlides = carouselSlides.length;
-  
-  // Function to move to a specific slide
-  function moveToSlide(index) {
+ // Carousel Functionality
+const carouselContainer = document.querySelector('.carousel-container');
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+const totalSlides = carouselSlides.length;
+
+// Function to move to a specific slide
+function moveToSlide(index) {
     if (index < 0) {
-      index = totalSlides - 1;
+        index = totalSlides - 1;
     } else if (index >= totalSlides) {
-      index = 0;
+        index = 0;
     }
     carouselContainer.style.transform = `translateX(${-index * 100}%)`;
     currentIndex = index;
-  }
-  
-  // Automatic sliding
-  let autoSlideInterval = setInterval(() => {
+}
+
+// Automatic sliding
+let autoSlideInterval = setInterval(() => {
     moveToSlide(currentIndex + 1);
-  }, 3000);
-  
-  // Pause auto-sliding on hover
-  carouselContainer.addEventListener('mouseenter', () => {
+}, 3500);
+
+// Pause auto-sliding on hover
+carouselContainer.addEventListener('mouseenter', () => {
     clearInterval(autoSlideInterval);
-  });
-  
-  carouselContainer.addEventListener('mouseleave', () => {
+});
+
+carouselContainer.addEventListener('mouseleave', () => {
     autoSlideInterval = setInterval(() => {
-      moveToSlide(currentIndex + 1);
+        moveToSlide(currentIndex + 1);
     }, 3000);
-  });
-  
-  // Manual navigation
-  prevBtn.addEventListener('click', () => {
+});
+
+// Manual navigation
+prevBtn.addEventListener('click', () => {
     moveToSlide(currentIndex - 1);
-  });
-  
-  nextBtn.addEventListener('click', () => {
+});
+
+nextBtn.addEventListener('click', () => {
     moveToSlide(currentIndex + 1);
-  });
+});
   
   // Map Initialization
   const map = L.map('map-container').setView([28.5937, 78.5629], 5); // Centered on India
@@ -69,4 +68,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   locations.forEach(location => {
     L.marker(location.coords).addTo(map)
       .bindPopup(location.name);
+  });
+
+
+  // Prevent the user from going back to the previous page
+  history.pushState(null, document.title, location.href);
+  window.addEventListener('popstate', function (event) {
+      history.pushState(null, document.title, location.href);
   });
