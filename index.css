@@ -37,6 +37,7 @@ body {
     font-size: 48px;
     margin-bottom: 20px;
     animation: zoomInOut 2s infinite alternate ease-in-out; /* Add animation */
+    display: inline-block; /* Ensure the animation doesn't affect layout */
   }
   
   @keyframes zoomInOut {
